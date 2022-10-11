@@ -3,6 +3,7 @@
 
 /**
  * partition - Implementationof lomuto partition scheme
+ * @array: array to be sorted
  * @start: starting point
  * @end: end point
  * @size: size of array
@@ -50,7 +51,7 @@ int partition(int *array, int start, int end, size_t size)
 void q_sort(int *array, int start, int end, size_t size)
 {
 	int pIndex;
-	
+
 	if (start >= end)
 		return;
 	pIndex = partition(array, start, end, size);
@@ -61,7 +62,7 @@ void q_sort(int *array, int start, int end, size_t size)
 
 /**
  * quick_sort - sorts an array of ints using quick sort
- * @array - pointer to array to be sorted
+ * @array: pointer to array to be sorted
  * @size: number of elements in array
  */
 
@@ -69,5 +70,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
 		return;
-	q_sort(array, 0, size-1, size);
+	q_sort(array, 0, size - 1, size);
 }
